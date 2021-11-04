@@ -6,7 +6,7 @@ const swaggerDoc = require("swagger-jsdoc");
 
 /**
  * @openapi
- * /:
+ * /greet:
  *   get:
  *     description: Returns a greeting message
  *     responses:
@@ -19,7 +19,7 @@ const swaggerDoc = require("swagger-jsdoc");
  *         schema: 
  *          type: string
  */
-router.get("/", function (req, res, next) {
+router.get("/greet", function (req, res, next) {
     if(req.body.name) {
         const name = req.body.name;
         res.send(`Happy Birthday, ${name}!` )
